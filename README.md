@@ -20,6 +20,10 @@ To help you keep track of how many slides you've finished / have remaining:
 
 - (If possible) An API connection to google sheets to automatically check off a slide as done
 
+  - Resources:
+    - [google.com/slides/api/reference/rest#rest-resource:-v1.presentations](https://developers.google.com/slides/api/reference/rest#rest-resource:-v1.presentations)
+    - [stackoverflow.com/questions/54138971/is-there-a-way-to-get-the-current-slide-the-user-is-on-google-slides-and-apps](https://stackoverflow.com/questions/54138971/is-there-a-way-to-get-the-current-slide-the-user-is-on-google-slides-and-apps)
+
 - Add another timer to calculate how much time you have left PER SLIDE (based on how many slides are remaining, and how much overall time you have left)
 
 - Add colour coding to the overall timer and/or the time remaining timer (mentioned in the point above) - e.g.
