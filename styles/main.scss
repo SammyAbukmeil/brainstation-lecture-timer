@@ -1,0 +1,13 @@
+@use "./partials/resets";
+
+.header {
+  margin: 1rem;
+}
+
+.timer {
+  span {
+    margin: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
