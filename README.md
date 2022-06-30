@@ -4,9 +4,15 @@ A tool to help educators keep track of how much time & lectures they've got left
 
 # Features
 
-Input: - How much time you have (in minutes) - How many slides you need to get through - Click go
+Provide the following details via the form:
 
-You can click each slide to mark it as done
+- **How much time** you have (in minutes)
+- **How many slides** you need to get through
+- Click "Start Timer"
+
+To help you keep track of how many slides you've finished / have remaining:
+
+- You can click each slide to mark it as done
 
 ## Potential Future Features
 

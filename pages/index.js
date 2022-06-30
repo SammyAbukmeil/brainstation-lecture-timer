@@ -43,11 +43,13 @@ export default function Home() {
         <Form submitHandler={submitHandler} />
         <section className="timer">
           {timer > 0 && (
-            <Countdown date={Date.now() + timer}>
-              <TimerComplete />
-            </Countdown>
+            <>
+              <Countdown date={Date.now() + timer}>
+                <TimerComplete />
+              </Countdown>
+              <SlideList slides={slideElements} />
+            </>
           )}
-          <SlideList slides={slideElements} />
         </section>
       </main>
     </div>
