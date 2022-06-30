@@ -19,3 +19,10 @@ To help you keep track of how many slides you've finished / have remaining:
 - Some slides take longer to go through (inc. a code along for that slides material), so perhaps a "weight" can be added to each slide. A higher weight would be seen visiaully by a bigger slide block.
 
 - (If possible) An API connection to google sheets to automatically check off a slide as done
+
+- Add another timer to calculate how much time you have left PER SLIDE (based on how many slides are remaining, and how much overall time you have left)
+
+- Add colour coding to the overall timer and/or the time remaining timer (mentioned in the point above) - e.g.
+  - Green - you have lots of time left
+  - Amber - You're running low on time
+  - Red - You're about to run over
