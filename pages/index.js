@@ -54,7 +54,7 @@ export default function Home() {
         <header className="header">
           <h1>Brainstation Lecture Timer</h1>
         </header>
-        <Form submitHandler={submitHandler} />
+        {!timer && <Form submitHandler={submitHandler} />}
         <section className="timer">
           {timer > 0 && (
             <>

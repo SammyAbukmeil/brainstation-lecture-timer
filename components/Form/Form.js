@@ -2,7 +2,7 @@ import styles from "./Form.module.scss";
 
 const Form = (props) => {
   return (
-    <form className="form" onSubmit={(e) => props.submitHandler(e)}>
+    <form className={styles.form} onSubmit={(e) => props.submitHandler(e)}>
       <div className={styles.wrapper}>
         <label className={styles.label} htmlFor="time">
           Lecture Length (minutes)?
@@ -22,7 +22,7 @@ const Form = (props) => {
         <input type="number" name="slides" id="slides" placeholder="30" />
       </div>
       <div className={styles.wrapper}>
-        <button>Start Timer</button>
+        <button className={styles.btn}>Start Timer</button>
       </div>
     </form>
   );
