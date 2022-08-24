@@ -1,5 +1,5 @@
-const TimerComplete = () => {
-  return <p>Done!</p>;
+const TimerComplete = ({ message }) => {
+  return <p>{message}</p>;
 };
 
 export default TimerComplete;

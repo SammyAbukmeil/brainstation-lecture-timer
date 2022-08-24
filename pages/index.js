@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { useState, useRef } from "react";
 import Countdown from "react-countdown";
+import BreakCountdown from "../components/BreakCountdown/BreakCountdown";
+import Controls from "../components/Controls/Controls";
 import Form from "../components/Form/Form";
 import LectureSlide from "../components/LectureSlide/LectureSlide";
 import SlideList from "../components/SlideList/SlideList";
@@ -8,6 +10,7 @@ import TimerComplete from "../components/TimerComplete/TimerComplete";
 
 export default function Home() {
   const countDownRef = useRef();
+  const breakCountDownRef = useRef();
   const [timer, setTimer] = useState(0);
   const [slides, setSlides] = useState(0);
 
@@ -31,10 +34,12 @@ export default function Home() {
 
   const pauseClickHandler = () => {
     countDownRef.current.pause();
+    breakCountDownRef.current.pause();
   };
 
   const resumeClickHandler = () => {
     countDownRef.current.start();
+    breakCountDownRef.current.start();
   };
 
   return (
@@ -53,15 +58,19 @@ export default function Home() {
         <section className="timer">
           {timer > 0 && (
             <>
-              <Countdown date={Date.now() + timer} ref={countDownRef}>
-                <TimerComplete />
-              </Countdown>
-              <button className="timer__btn" onClick={pauseClickHandler}>
-                Pause
-              </button>
-              <button className="timer__btn" onClick={resumeClickHandler}>
-                Resume
-              </button>
+              <section className="countdowns">
+                <Countdown date={Date.now() + timer} ref={countDownRef}>
+                  <TimerComplete message="Done!" />
+                </Countdown>
+                <Controls
+                  pause={pauseClickHandler}
+                  resume={resumeClickHandler}
+                />
+                <BreakCountdown
+                  time={timer}
+                  breakCountdownRef={breakCountDownRef}
+                />
+              </section>
               <SlideList slides={slideElements} />
             </>
           )}
