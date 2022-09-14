@@ -6,8 +6,14 @@ const BreakCountdown = (props) => {
 
   return (
     <>
-      <Countdown date={halfLectureTime} ref={props.breakCountdownRef}>
-        <TimerComplete message="Break is over!" />
+      <Countdown
+        date={halfLectureTime}
+        ref={props.breakCountdownRef}
+        daysInHours={true}
+        zeroPadTime={2}
+        // zeroPadDays={0}
+      >
+        <TimerComplete message="Break Time!" />
       </Countdown>
     </>
   );

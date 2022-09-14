@@ -32,15 +32,15 @@ export default function Home() {
     slideElements.push(<LectureSlide key={i} slide={i} />);
   }
 
-  const pauseClickHandler = () => {
-    countDownRef.current.pause();
-    breakCountDownRef.current.pause();
-  };
+  // const pauseClickHandler = () => {
+  //   countDownRef.current.pause();
+  //   breakCountDownRef.current.pause();
+  // };
 
-  const resumeClickHandler = () => {
-    countDownRef.current.start();
-    breakCountDownRef.current.start();
-  };
+  // const resumeClickHandler = () => {
+  //   countDownRef.current.start();
+  //   breakCountDownRef.current.start();
+  // };
 
   return (
     <div>
@@ -48,24 +48,33 @@ export default function Home() {
         <title>Brainstation Lecture Timer</title>
         <meta name="description" content="Help educators time their lectures" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
-      <main>
-        <header className="header">
-          <h1>Brainstation Lecture Timer</h1>
-        </header>
+      <main className="main">
         {!timer && <Form submitHandler={submitHandler} />}
         <section className="timer">
           {timer > 0 && (
             <>
               <section className="countdowns">
-                <Countdown date={Date.now() + timer} ref={countDownRef}>
+                <Countdown
+                  date={Date.now() + timer}
+                  ref={countDownRef}
+                  zeroPadTime={2}
+                  daysInHours={true}
+                  // zeroPadDays={0}
+                >
                   <TimerComplete message="Done!" />
                 </Countdown>
-                <Controls
+                {/* <Controls
                   pause={pauseClickHandler}
                   resume={resumeClickHandler}
-                />
+                /> */}
                 <BreakCountdown
                   time={timer}
                   breakCountdownRef={breakCountDownRef}

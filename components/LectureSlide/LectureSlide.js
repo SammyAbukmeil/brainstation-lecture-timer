@@ -13,7 +13,7 @@ const LectureSlide = (props) => {
       className={`${styles.lecture} ${done ? styles.done : ""}`}
       onClick={clickHandler}
     >
-      {!done && `Slide ${props.slide + 1}`}
+      {!done && `${props.slide + 1}`}
     </article>
   );
 };

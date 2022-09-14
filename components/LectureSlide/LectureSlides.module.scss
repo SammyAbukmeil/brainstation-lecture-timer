@@ -1,9 +1,15 @@
 .lecture {
   margin: 1rem;
   padding: 1rem;
-  border: 1px solid black;
-  min-width: 90px;
+  background-color: rgb(196, 223, 246);
+  width: 200px;
+  height: 100px;
   text-align: center;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 
   &:hover {
     cursor: pointer;
@@ -11,9 +17,5 @@
 }
 
 .done {
-  background-color: grey;
-  width: 10px;
-  height: 10px;
-  min-width: 3px;
-  padding: 0;
+  display: none;
 }

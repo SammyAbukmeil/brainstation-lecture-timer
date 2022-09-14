@@ -1,5 +1,16 @@
 @use "./partials/resets";
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   margin: 1rem;
   text-align: center;
@@ -19,7 +30,16 @@
 
 .countdowns {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+
+  span {
+    padding: 2rem;
+    background-color: aquamarine;
+    border-radius: 10px;
+    font-size: 3rem;
+    // text-indent: -72px;
+    // overflow: hidden;
+  }
 }
 
 .controls {
