@@ -1,8 +1,7 @@
 import Head from "next/head";
-import { useState, useRef } from "react";
+import { useRef, useState } from "react";
 import Countdown from "react-countdown";
 import BreakCountdown from "../components/BreakCountdown/BreakCountdown";
-import Controls from "../components/Controls/Controls";
 import Form from "../components/Form/Form";
 import LectureSlide from "../components/LectureSlide/LectureSlide";
 import SlideList from "../components/SlideList/SlideList";
@@ -32,16 +31,6 @@ export default function Home() {
     slideElements.push(<LectureSlide key={i} slide={i} />);
   }
 
-  // const pauseClickHandler = () => {
-  //   countDownRef.current.pause();
-  //   breakCountDownRef.current.pause();
-  // };
-
-  // const resumeClickHandler = () => {
-  //   countDownRef.current.start();
-  //   breakCountDownRef.current.start();
-  // };
-
   return (
     <div>
       <Head>
@@ -67,14 +56,10 @@ export default function Home() {
                   ref={countDownRef}
                   zeroPadTime={2}
                   daysInHours={true}
-                  // zeroPadDays={0}
+                  overtime={true}
                 >
                   <TimerComplete message="Done!" />
                 </Countdown>
-                {/* <Controls
-                  pause={pauseClickHandler}
-                  resume={resumeClickHandler}
-                /> */}
                 <BreakCountdown
                   time={timer}
                   breakCountdownRef={breakCountDownRef}

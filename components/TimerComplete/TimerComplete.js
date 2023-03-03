@@ -1,7 +1,14 @@
 import styles from "./TimerComplete.module.scss";
 
-const TimerComplete = ({ message }) => {
-  return <span className={styles.complete}>{message}</span>;
+const TimerComplete = () => {
+  return (
+    <article styles={styles.complete}>
+      <p>Ran over?</p>
+      <p>
+        <u>Update the schedule</u>
+      </p>
+    </article>
+  );
 };
 
 export default TimerComplete;
