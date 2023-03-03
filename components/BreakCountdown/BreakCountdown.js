@@ -11,9 +11,8 @@ const BreakCountdown = (props) => {
         ref={props.breakCountdownRef}
         daysInHours={true}
         zeroPadTime={2}
-        // zeroPadDays={0}
       >
-        <TimerComplete message="Break Time!" />
+        <TimerComplete />
       </Countdown>
     </>
   );

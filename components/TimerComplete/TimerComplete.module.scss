@@ -1,3 +1,9 @@
+@use "../../styles/partials/animations" as *;
+
 .complete {
-  color: red;
+  background-color: darkorange !important;
+  color: white;
+  animation-duration: 2s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
 }
