@@ -13,10 +13,13 @@
 .wrapper {
   margin: 1rem;
   min-width: 110px;
+  display: flex;
+  align-items: center;
 }
 
 .label {
   display: inline-block;
+  width: 3rem;
 }
 
 .input {

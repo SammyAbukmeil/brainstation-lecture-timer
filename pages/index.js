@@ -12,23 +12,28 @@ export default function Home() {
   const breakCountDownRef = useRef();
   const [timer, setTimer] = useState(0);
   const [slides, setSlides] = useState(0);
+  const [heavySlides, setHeavySlides] = useState(0);
 
   const submitHandler = (e) => {
     e.preventDefault();
 
     const time = e.target.time.value;
     const slides = e.target.slides.value;
+    const heavySlides = e.target.heavySlides.value
 
     const milliseconds = time * 60000;
 
     setTimer(milliseconds);
     setSlides(slides);
+    setHeavySlides(heavySlides)
   };
 
   const slideElements = [];
 
   for (let i = 0; i < slides; i++) {
-    slideElements.push(<LectureSlide key={i} slide={i} />);
+    const splitHeavySlides = heavySlides.split(" ").map((heavySlide) => +heavySlide);
+
+    slideElements.push(<LectureSlide key={i} slide={i} isHeavy={splitHeavySlides.includes(i + 1)} />);
   }
 
   return (

@@ -10,7 +10,7 @@ const LectureSlide = (props) => {
 
   return (
     <article
-      className={`${styles.lecture} ${done ? styles.done : ""}`}
+      className={`${styles.lecture} ${done ? styles.done : ""} ${props.isHeavy ? styles.heavy : ""}`}
       onClick={clickHandler}
     >
       {!done && `${props.slide + 1}`}

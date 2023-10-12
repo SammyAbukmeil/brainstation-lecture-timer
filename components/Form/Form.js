@@ -27,6 +27,18 @@ const Form = (props) => {
           Slides
         </label>
       </div>
+      <div className={styles.wrapper}>
+        <input
+          className={styles.input}
+          type="text"
+          name="heavySlides"
+          id="heavySlides"
+          placeholder="1 2 3"
+        />
+        <label className={styles.label} htmlFor="heavySlides">
+          Heavy Slides
+        </label>
+      </div>
       <button className={styles.btn}>Start</button>
     </form>
   );
