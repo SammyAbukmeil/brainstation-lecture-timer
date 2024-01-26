@@ -1,3 +1,4 @@
+import ReactSelect from "react-select";
 import styles from "./Form.module.scss";
 
 const Form = (props) => {
@@ -22,23 +23,40 @@ const Form = (props) => {
           name="slides"
           id="slides"
           placeholder="30"
+          onChange={(e) => {
+            const amount = e.target.value;
+
+            const choices = [];
+
+            for (let i = 0; i < amount; i++) {
+              const slideNumber = i + 1;
+
+              choices.push({ value: slideNumber, label: slideNumber.toString() })
+            }
+
+            props.setHeavySlideOptions(choices)
+          }}
         />
         <label className={styles.label} htmlFor="slides">
           Slides
         </label>
       </div>
-      <div className={styles.wrapper}>
-        <input
-          className={styles.input}
+      {/* <div className={styles.wrapper}>
+        <ReactSelect
+          isMulti
+          options={props.heavySlideOptions}
+          className="basic-multi-select"
+          // className={styles.input}
           type="text"
           name="heavySlides"
           id="heavySlides"
-          placeholder="1 2 3"
+          classNamePrefix="select"
+          placeholder="1, 2"
         />
         <label className={styles.label} htmlFor="heavySlides">
           Heavy Slides
         </label>
-      </div>
+      </div> */}
       <button className={styles.btn}>Start</button>
     </form>
   );

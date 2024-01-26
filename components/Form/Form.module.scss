@@ -1,7 +1,7 @@
 .form {
   border: 1px solid black;
   border-radius: 5px;
-  width: 200px;
+  width: 300px;
   margin: 2rem auto;
   background-color: #f5f5f5;
   display: flex;
@@ -12,9 +12,10 @@
 
 .wrapper {
   margin: 1rem;
-  min-width: 110px;
+  min-width: 150px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .label {
@@ -25,6 +26,9 @@
 .input {
   width: 50px;
   margin-right: 1rem;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 80%);
+  padding: 5px;
 }
 
 .btn {
